@@ -1,7 +1,7 @@
 // ┌─┐┬─┐┌─┐┌─┐┌┬┐┬┌┐┌┌─┐┌─┐
 // │  ├┬┘├┤ ├┤  │ │││││ ┬└─┐
 // └─┘┴└─└─┘└─┘ ┴ ┴┘└┘└─┘└─┘
-// Function to set Greetings with a typewriter effect
+// Function to set Greetings with a highly polished typewriter effect
 
 const today = new Date();
 const hour = today.getHours();
@@ -23,22 +23,35 @@ if (hour >= 23 || hour < 6) {
 	greetingText = gree4 + name;
 }
 
-const typeWriter = (element, text, speed = 60) => {
+const typeWriter = (element, text, speed = 35) => {
 	element.innerText = '';
 	element.classList.remove('done');
 	let i = 0;
-	const timer = setInterval(() => {
+
+	const type = () => {
 		if (i < text.length) {
-			element.innerText += text.charAt(i);
+			const char = text.charAt(i);
+			element.innerText += char;
 			i++;
+
+			// Add a subtle human-like speed variation (jitter)
+			let delay = speed + (Math.random() * 20 - 10);
+
+			// Add a natural pause after punctuation marks
+			if (char === ',' || char === '!' || char === '.') {
+				delay = 350;
+			}
+
+			setTimeout(type, delay);
 		} else {
-			clearInterval(timer);
-			// Smoothly fade out the cursor after a small delay
+			// Finished typing, fade out cursor
 			setTimeout(() => {
 				element.classList.add('done');
-			}, 1000);
+			}, 800);
 		}
-	}, speed);
+	};
+
+	type();
 };
 
-typeWriter(document.getElementById('greetings'), greetingText, 75);
+typeWriter(document.getElementById('greetings'), greetingText, 35);
