@@ -1,7 +1,7 @@
 // ┌─┐┬─┐┌─┐┌─┐┌┬┐┬┌┐┌┌─┐┌─┐
 // │  ├┬┘├┤ ├┤  │ │││││ ┬└─┐
 // └─┘┴└─└─┘└─┘ ┴ ┴┘└┘└─┘└─┘
-// Function to set Greetings with a highly polished typewriter effect
+// Function to set Greetings with an ultra-smooth GPU-accelerated reveal effect
 
 const today = new Date();
 const hour = today.getHours();
@@ -23,35 +23,39 @@ if (hour >= 23 || hour < 6) {
 	greetingText = gree4 + name;
 }
 
-const typeWriter = (element, text, speed = 35) => {
-	element.innerText = '';
+const typeWriter = (element, text, speed = 25) => {
+	element.innerHTML = '';
 	element.classList.remove('done');
-	let i = 0;
 
-	const type = () => {
-		if (i < text.length) {
-			const char = text.charAt(i);
-			element.innerText += char;
-			i++;
-
-			// Add a subtle human-like speed variation (jitter)
-			let delay = speed + (Math.random() * 20 - 10);
-
-			// Add a natural pause after punctuation marks
+	let charIndex = 0;
+	const words = text.split(' ');
+	
+	const wordMarkups = words.map(word => {
+		const chars = Array.from(word);
+		const charMarkups = chars.map(char => {
+			const delay = (charIndex * speed) / 1000;
+			charIndex++;
+			
+			// Add a natural pause after punctuation marks by skipping frames in the delay
 			if (char === ',' || char === '!' || char === '.') {
-				delay = 350;
+				charIndex += 12; // Adds ~300ms pause before next char begins
 			}
+			
+			return `<span class="char" style="animation-delay: ${delay}s">${char}</span>`;
+		}).join('');
+		
+		charIndex++; // Delay increment for space
+		return `<span class="word" style="display: inline-block; white-space: nowrap;">${charMarkups}</span>`;
+	});
 
-			setTimeout(type, delay);
-		} else {
-			// Finished typing, fade out cursor
-			setTimeout(() => {
-				element.classList.add('done');
-			}, 800);
-		}
-	};
+	// Join words with non-breaking spaces for correct wrapping
+	element.innerHTML = wordMarkups.join('&nbsp;');
 
-	type();
+	// Transition done state for blinking cursor fade out
+	const totalDuration = (charIndex * speed) + 300; // ms
+	setTimeout(() => {
+		element.classList.add('done');
+	}, totalDuration);
 };
 
-typeWriter(document.getElementById('greetings'), greetingText, 35);
+typeWriter(document.getElementById('greetings'), greetingText, 25);
