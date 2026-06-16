@@ -134,6 +134,10 @@ const CONFIG = {
 				{
 					name: 'Outlook',
 					link: 'https://outlook.com/',
+				},
+				{
+					name: 'Azure',
+					link: 'https://azure.com/',
 				}
 			]
 		}
