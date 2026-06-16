@@ -49,69 +49,69 @@ const CONFIG = {
 	// └─┘└─┘ ┴  ┴ └─┘┘└┘└─┘
 
 	firstButtonsContainer: [
-		// {
-		// 	id: '1',
-		// 	name: 'WhatsApp',
-		// 	icon: 'chat-circle',
-		// 	link: 'https://web.whatsapp.com/',
-		// },
-		// {
-		// 	id: '2',
-		// 	name: 'Mail',
-		// 	icon: 'envelope-simple',
-		// 	link: 'https://accounts.google.com/',
-		// },
-		// {
-		// 	id: '3',
-		// 	name: 'Outlook',
-		// 	icon: 'envelope-simple',
-		// 	link: 'https://outlook.com/',
-		// },
-		// {
-		// 	id: '4',
-		// 	name: 'Reddit',
-		// 	icon: 'hash',
-		// 	link: 'https://reddit.com/',
-		// }
+		{
+			id: '1',
+			name: 'WhatsApp',
+			icon: 'chat-circle',
+			link: 'https://web.whatsapp.com/',
+		},
+		{
+			id: '2',
+			name: 'Mail',
+			icon: 'envelope-simple',
+			link: 'https://accounts.google.com/',
+		},
+		{
+			id: '3',
+			name: 'Outlook',
+			icon: 'envelope-simple',
+			link: 'https://outlook.com/',
+		},
+		{
+			id: '4',
+			name: 'Reddit',
+			icon: 'hash',
+			link: 'https://reddit.com/',
+		}
 	],
 
 	secondButtonsContainer: [
-		// {
-		// 	id: '1',
-		// 	name: 'Spotify',
-		// 	icon: 'spotify-logo',
-		// 	link: 'https://open.spotify.com/',
-		// },
-		// {
-		// 	id: '2',
-		// 	name: 'Amazon',
-		// 	icon: 'amazon-logo',
-		// 	link: 'https://amazon.com/',
-		// },
-		// {
-		// 	id: '3',
-		// 	name: 'Figma',
-		// 	icon: 'figma-logo',
-		// 	link: 'https://figma.com/',
-		// },
-		// {
-		// 	id: '4',
-		// 	name: 'Hashnode',
-		// 	icon: 'hashnode-logo',
-		// 	link: 'https://hashnode.com/',
-		// },
-		// {
-		// 	id: '5',
-		// 	name: 'WhatsApp',
-		// 	icon: 'chat-circle',
-		// 	link: 'https://web.whatsapp.com/',
-		// },
-		// {
-		// 	id: '6',
-		// 	name: 'Telegram',
-		// 	icon: 'paper-plane-tilt',
-		// 	link: 'https://web.telegram.org/',
-		// },
+		{
+			id: '1',
+			name: 'Spotify',
+			icon: 'spotify-logo',
+			link: 'https://open.spotify.com/',
+		},
+		{
+			id: '2',
+			name: 'Amazon',
+			icon: 'amazon-logo',
+			link: 'https://amazon.com/',
+		},
+		{
+			id: '3',
+			name: 'Figma',
+			icon: 'figma-logo',
+			link: 'https://figma.com/',
+		},
+		{
+			id: '4',
+			name: 'Hashnode',
+			icon: 'hashnode-logo',
+			link: 'https://hashnode.com/',
+		},
+		{
+			id: '5',
+			name: 'WhatsApp',
+			icon: 'chat-circle',
+			link: 'https://web.whatsapp.com/',
+		},
+		{
+			id: '6',
+			name: 'Telegram',
+			icon: 'paper-plane-tilt',
+			link: 'https://web.telegram.org/',
+		},
 	],
 
 	// ┬  ┬┌─┐┌┬┐┌─┐
@@ -137,52 +137,52 @@ const CONFIG = {
 				}
 			]
 		}
-	]
+	],
 
-	// secondListsContainer: [
-	// 	{
-	// 		icon: 'music',
-	// 		id: '1',
-	// 		links: [
-	// 			{
-	// 				name: 'YouTube Music',
-	// 				link: 'https://music.youtube.com/',
-	// 			},
-	// 			{
-	// 				name: 'SoundCloud',
-	// 				link: 'https://soundcloud.com/',
-	// 			},
-	// 			{
-	// 				name: 'Bandcamp',
-	// 				link: 'https://bandcamp.com/',
-	// 			},
-	// 			{
-	// 				name: 'Last.fm',
-	// 				link: 'https://last.fm/',
-	// 			},
-	// 		],
-	// 	},
-	// 	{
-	// 		icon: 'bookmark',
-	// 		id: '2',
-	// 		links: [
-	// 			{
-	// 				name: 'Pocket',
-	// 				link: 'https://getpocket.com/',
-	// 			},
-	// 			{
-	// 				name: 'Notion',
-	// 				link: 'https://notion.so/',
-	// 			},
-	// 			{
-	// 				name: 'Trello',
-	// 				link: 'https://trello.com/',
-	// 			},
-	// 			{
-	// 				name: 'Todoist',
-	// 				link: 'https://todoist.com/',
-	// 			},
-	// 		],
-	// 	},
-	// ],
+	secondListsContainer: [
+		{
+			icon: 'music',
+			id: '1',
+			links: [
+				{
+					name: 'YouTube Music',
+					link: 'https://music.youtube.com/',
+				},
+				{
+					name: 'SoundCloud',
+					link: 'https://soundcloud.com/',
+				},
+				{
+					name: 'Bandcamp',
+					link: 'https://bandcamp.com/',
+				},
+				{
+					name: 'Last.fm',
+					link: 'https://last.fm/',
+				},
+			],
+		},
+		{
+			icon: 'bookmark',
+			id: '2',
+			links: [
+				{
+					name: 'Pocket',
+					link: 'https://getpocket.com/',
+				},
+				{
+					name: 'Notion',
+					link: 'https://notion.so/',
+				},
+				{
+					name: 'Trello',
+					link: 'https://trello.com/',
+				},
+				{
+					name: 'Todoist',
+					link: 'https://todoist.com/',
+				},
+			],
+		},
+	],
 };
