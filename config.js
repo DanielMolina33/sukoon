@@ -13,25 +13,29 @@ const CONFIG = {
 	name: 'Dani',
 	imageBackground: false,
 	openInNewTab: true,
-	twelveHourFormat: true,
+	twelveHourFormat: false,
+
+	// Months and weekdays
+	monthNames: ['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ag', 'Sep', 'Oct', 'Nov', 'Dic'],
+	weekdayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
 
 	// Greetings
-	greetingMorning: 'Good morning,',
-	greetingAfternoon: 'Good afternoon,',
-	greetingEvening: 'Good evening,',
-	greetingNight: 'Good night, sleep well.',
+	greetingMorning: 'Buenos días,',
+	greetingAfternoon: 'Buenas tardes,',
+	greetingEvening: 'Buenas noches,',
+	greetingNight: 'Buenas noches, descansa.',
 
 	// Layout
-	layout: 'bento', // 'bento', 'lists', 'buttons'
+	layout: 'buttons', // 'bento', 'lists', 'buttons'
 
 	// Weather
 	weatherKey: '90e34c69e2b557e6cd5df5f7b4094da3', // Get your API key from https://openweathermap.org/
 	weatherIcons: 'OneDark', // 'OneDark', 'Nord', 'Dark', 'White'
 	weatherUnit: 'C', // 'C' or 'F'
-	language: 'en', // More languages at https://openweathermap.org/current#multi
-	trackLocation: true, // If false or an error occurs, the app will use the lat/lon below
-	defaultLatitude: '0.0',
-	defaultLongitude: '0.0',
+	language: 'es', // More languages at https://openweathermap.org/current#multi
+	trackLocation: false, // If false or an error occurs, the app will use the lat/lon below
+	defaultLatitude: '3.4056285338446677',
+	defaultLongitude: '-76.38313590214631',
 
 	// Auto-change theme
 	autoChangeTheme: true,
@@ -41,7 +45,7 @@ const CONFIG = {
 
 	// Auto-change by hour (24hr format, hh:mm)
 	changeThemeByHour: true,
-	hourDarkThemeActive: '18:30',
+	hourDarkThemeActive: '16:00',
 	hourDarkThemeInactive: '07:00',
 
 	// ┌┐ ┬ ┬┌┬┐┌┬┐┌─┐┌┐┌┌─┐
@@ -50,68 +54,33 @@ const CONFIG = {
 
 	firstButtonsContainer: [
 		{
-			id: '1',
+			id: '2',
 			name: 'WhatsApp',
-			icon: 'chat-circle',
+			icon: 'whatsapp-logo',
 			link: 'https://web.whatsapp.com/',
 		},
 		{
-			id: '2',
-			name: 'Mail',
+			id: '5',
+			name: 'Gmail',
 			icon: 'envelope-simple',
 			link: 'https://accounts.google.com/',
-		},
-		{
-			id: '3',
-			name: 'Outlook',
-			icon: 'envelope-simple',
-			link: 'https://outlook.com/',
-		},
-		{
-			id: '4',
-			name: 'Reddit',
-			icon: 'hash',
-			link: 'https://reddit.com/',
 		}
 	],
 
 	secondButtonsContainer: [
+
 		{
 			id: '1',
-			name: 'Spotify',
-			icon: 'spotify-logo',
-			link: 'https://open.spotify.com/',
+			name: 'Outlook',
+			icon: 'microsoft-outlook-logo',
+			link: 'https://outlook.com/',
 		},
 		{
 			id: '2',
-			name: 'Amazon',
-			icon: 'amazon-logo',
-			link: 'https://amazon.com/',
-		},
-		{
-			id: '3',
-			name: 'Figma',
-			icon: 'figma-logo',
-			link: 'https://figma.com/',
-		},
-		{
-			id: '4',
-			name: 'Hashnode',
-			icon: 'hashnode-logo',
-			link: 'https://hashnode.com/',
-		},
-		{
-			id: '5',
-			name: 'WhatsApp',
-			icon: 'chat-circle',
-			link: 'https://web.whatsapp.com/',
-		},
-		{
-			id: '6',
-			name: 'Telegram',
-			icon: 'paper-plane-tilt',
-			link: 'https://web.telegram.org/',
-		},
+			name: 'Google',
+			icon: 'google-logo',
+			link: 'https://google.com/',
+		}
 	],
 
 	// ┬  ┬┌─┐┌┬┐┌─┐
@@ -122,24 +91,7 @@ const CONFIG = {
 		{
 			icon: 'sparkle',
 			id: '1',
-			links: [
-				{
-					name: 'WhatsApp',
-					link: 'https://web.whatsapp.com/',
-				},
-				{
-					name: 'Gmail',
-					link: 'https://accounts.google.com/',
-				},
-				{
-					name: 'Outlook',
-					link: 'https://outlook.com/',
-				},
-				{
-					name: 'Azure',
-					link: 'https://azure.com/',
-				}
-			]
+			links: []
 		}
 	],
 
@@ -147,46 +99,7 @@ const CONFIG = {
 		{
 			icon: 'music',
 			id: '1',
-			links: [
-				{
-					name: 'YouTube Music',
-					link: 'https://music.youtube.com/',
-				},
-				{
-					name: 'SoundCloud',
-					link: 'https://soundcloud.com/',
-				},
-				{
-					name: 'Bandcamp',
-					link: 'https://bandcamp.com/',
-				},
-				{
-					name: 'Last.fm',
-					link: 'https://last.fm/',
-				},
-			],
-		},
-		{
-			icon: 'bookmark',
-			id: '2',
-			links: [
-				{
-					name: 'Pocket',
-					link: 'https://getpocket.com/',
-				},
-				{
-					name: 'Notion',
-					link: 'https://notion.so/',
-				},
-				{
-					name: 'Trello',
-					link: 'https://trello.com/',
-				},
-				{
-					name: 'Todoist',
-					link: 'https://todoist.com/',
-				},
-			],
-		},
+			links: []
+		}
 	],
 };

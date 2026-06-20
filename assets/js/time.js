@@ -5,8 +5,8 @@
 
 window.onload = displayClock();
 function displayClock() {
-	const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-	const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+	const monthNames = CONFIG.monthNames;
+	const weekdayNames = CONFIG.weekdayNames;
 
 	var d = new Date();
 	var mm = monthNames[d.getMonth()];
