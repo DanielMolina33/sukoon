@@ -10,7 +10,7 @@ const generateFirstButtonsContainer = () => {
           href="${button.link}"
           target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		  title="${button.name}"
-          class="card button button__${button.id}"
+          class="card button"
         >
           <i class="ph ph-${button.icon} buttonIcon"></i>
         </a>
@@ -22,24 +22,24 @@ const generateFirstButtonsContainer = () => {
 	}
 };
 
-const generateSecondButtonsContainer = () => {
-	for (const button of CONFIG.secondButtonsContainer) {
-		let item = `
-        <a
-          href="${button.link}"
-          target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		  title="${button.name}"
-          class="card button button__${button.id}"
-        >
-          <i class="ph ph-${button.icon} buttonIcon"></i>
-        </a>
-    `;
+// const generateSecondButtonsContainer = () => {
+// 	for (const button of CONFIG.secondButtonsContainer) {
+// 		let item = `
+//         <a
+//           href="${button.link}"
+//           target="${CONFIG.openInNewTab ? '_blank' : ''}"
+// 		  title="${button.name}"
+//           class="card button button__${button.id}"
+//         >
+//           <i class="ph ph-${button.icon} buttonIcon"></i>
+//         </a>
+//     `;
 
-		const position = 'beforeend';
+// 		const position = 'beforeend';
 
-		buttons_2.insertAdjacentHTML(position, item);
-	}
-};
+// 		buttons_2.insertAdjacentHTML(position, item);
+// 	}
+// };
 
 const generateButtons = () => {
 	switch (CONFIG.layout) {
@@ -47,8 +47,14 @@ const generateButtons = () => {
 			generateFirstButtonsContainer();
 			break;
 		case 'buttons':
+			linksBlockLeft.classList.add('w65');
+			buttons_1.classList.add('col4');
 			generateFirstButtonsContainer();
-			generateSecondButtonsContainer();
+
+			for (let child of buttons_1.children) {
+				child.classList.add('noGap');
+			}
+			// generateSecondButtonsContainer();
 			break;
 		default:
 			break;

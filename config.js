@@ -54,34 +54,32 @@ const CONFIG = {
 
 	firstButtonsContainer: [
 		{
-			id: '2',
+			id: '1',
 			name: 'WhatsApp',
 			icon: 'whatsapp-logo',
 			link: 'https://web.whatsapp.com/',
 		},
 		{
-			id: '5',
+			id: '2',
 			name: 'Gmail',
 			icon: 'envelope-simple',
 			link: 'https://accounts.google.com/',
-		}
-	],
-
-	secondButtonsContainer: [
-
+		},
 		{
-			id: '1',
+			id: '3',
 			name: 'Outlook',
 			icon: 'microsoft-outlook-logo',
 			link: 'https://outlook.com/',
 		},
 		{
-			id: '2',
+			id: '4',
 			name: 'Google',
 			icon: 'google-logo',
 			link: 'https://google.com/',
 		}
 	],
+
+	secondButtonsContainer: [],
 
 	// ┬  ┬┌─┐┌┬┐┌─┐
 	// │  │└─┐ │ └─┐
@@ -91,15 +89,49 @@ const CONFIG = {
 		{
 			icon: 'sparkle',
 			id: '1',
-			links: []
+			links: [
+				{
+					name: 'Gmail',
+					link: 'https://mail.google.com/',
+				},
+				{
+					name: 'Calendar',
+					link: 'https://calendar.google.com/',
+				},
+				{
+					name: 'Drive',
+					link: 'https://drive.google.com/',
+				},
+				{
+					name: 'Keep',
+					link: 'https://keep.google.com/',
+				}
+			]
 		}
 	],
 
 	secondListsContainer: [
 		{
-			icon: 'music',
+			icon: 'music-notes-simple',
 			id: '1',
-			links: []
+			links: [
+				{
+					name: 'Gmail',
+					link: 'https://mail.google.com/',
+				},
+				{
+					name: 'Calendar',
+					link: 'https://calendar.google.com/',
+				},
+				{
+					name: 'Drive',
+					link: 'https://drive.google.com/',
+				},
+				{
+					name: 'Keep',
+					link: 'https://keep.google.com/',
+				}
+			]
 		}
 	],
 };
