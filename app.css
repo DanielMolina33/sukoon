@@ -55,6 +55,7 @@
 /* S T Y L E S */
 
 html {
+  cursor: default;
   background-color: var(--background);
 }
 
