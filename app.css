@@ -55,7 +55,6 @@
 /* S T Y L E S */
 
 html {
-  cursor: default;
   background-color: var(--background);
 }
 
@@ -74,6 +73,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: default;
 }
 
 .notransition,
